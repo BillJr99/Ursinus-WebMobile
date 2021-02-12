@@ -141,7 +141,6 @@ textbooks:
   edition: "First Edition"
   isbn: "978-1449361341"
   link: https://www.amazon.com/gp/product/144936134X
-  image: http://images.amazon.com/images/P/144936134X.01._PI_SCMZZZZZZZ_.jpg
   isrequired: false   
   freelyavailable: false
 
