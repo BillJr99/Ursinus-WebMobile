@@ -30,8 +30,9 @@ API_URL = "https://ursinus.instructure.com/"
 # Obtain User ID from API_URL + /api/v1/users/self
 
 CANVAS_TIME_ZONE = "America/New_York"
-DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
-DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
+DUE_TIME = "" #"T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
+DUE_DATE_OFFSET = 0 # 1 # add 1 day to make things due the next morning per the due time above
+DUE_DATE_FORMAT = "%Y%m%d" # "%Y%m%dT%H%M%SZ"
 
 TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Rubrics", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
 TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video" ] # which navigation pane items to force show if they are already hidden
@@ -40,6 +41,7 @@ child_threads = []
 
 skipdiscussions = False
 skipassignments = False
+skipofficehours = True
             
 def makelink(base, url):
     if url.startswith("http"):
@@ -341,6 +343,7 @@ def create_assignment(course, inputdict):
         return
 
     asmt = course.create_assignment(inputdict)
+    
     return asmt
     
 # Create Assignment Group: https://canvas.instructure.com/doc/api/assignment_groups.html#method.assignment_groups_api.create
@@ -432,6 +435,9 @@ def create_calendar_event(canvas, inputdict):
         canvas.create_calendar_event(inputdict)
     except exceptions.ResourceDoesNotExist:
         print("Calendar Event Creation: Resource Does Not Exist")
+
+def create_late_policy(course, inputdict):
+    course.create_late_policy(**inputdict)
     
 def process_markdown(fname, canvas, course, courseid, homepage):
     f = open(fname, 'r')
@@ -454,6 +460,9 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     isS = postdict['info']['class_meets_days']['isS']
     isU = postdict['info']['class_meets_days']['isU']
     
+    late_penalty_per_period = float(postdict['info']['late_penalty_per_period'])
+    late_penalty_period = postdict['info']['late_penalty_period']
+    
     printlog("Replacing Syllabus Page with Course Homepage...")
     
     course.update(course={'time_zone': CANVAS_TIME_ZONE}) # Set time zone to Eastern Time
@@ -474,6 +483,14 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     inputdict['pinned'] = True
     inputdict['published'] = True
     add_discussion_topic(course, inputdict)
+    
+    inputdict = {}
+    inputdict['title'] = "Class Activity Questions"
+    inputdict['message'] = "This space will be used to answer class activity questions."
+    inputdict['discussion_type'] = "threaded"
+    inputdict['pinned'] = True
+    inputdict['published'] = True
+    add_discussion_topic(course, inputdict)    
     
     inputdict = {}
     inputdict['title'] = "Water Cooler"
@@ -539,9 +556,11 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             link = ""
    
         startd = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU)
-        
         coursedt = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU, tostring=False)
         coursedtstr = coursedt.strftime('%a, %b %d, %Y')
+        if 'reschedule' in item:
+            coursedtstr = item['reschedule']
+        
         weekdayidx = "(Week " + str(int(weekidx)+1) + " Day " + str(int(dayidx)+1) + ")"
         
         # Create a module for this entry
@@ -608,21 +627,72 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict = {}
                     inputdict['name'] = description
                     inputdict['submission_types'] = []
-                    inputdict['submission_types'].append('online_upload')
-                    inputdict['allowed_extensions'] = []
-                    inputdict['allowed_extensions'].append('zip')
-                    inputdict['allowed_extensions'].append('bz2')
-                    inputdict['allowed_extensions'].append('tar')
-                    inputdict['allowed_extensions'].append('gz')
-                    inputdict['allowed_extensions'].append('rar')
-                    inputdict['allowed_extensions'].append('7z')
+                    if "submission_types" in deliverable and "noupload" in deliverable['submission_types'].lower():
+                        inputdict['submission_types'].append('on_paper')
+                    else:
+                        inputdict['submission_types'].append('online_upload')
+                        inputdict['allowed_extensions'] = []
+                        inputdict['allowed_extensions'].append('zip')
+                        inputdict['allowed_extensions'].append('bz2')
+                        inputdict['allowed_extensions'].append('tar')
+                        inputdict['allowed_extensions'].append('gz')
+                        inputdict['allowed_extensions'].append('rar')
+                        inputdict['allowed_extensions'].append('7z')
+                        if "submission_types" in deliverable and "written" in deliverable['submission_types'].lower():
+                            inputdict['allowed_extensions'].append('pdf')
+                            inputdict['allowed_extensions'].append('doc')
+                            inputdict['allowed_extensions'].append('docx')
+                            inputdict['allowed_extensions'].append('txt')
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
                     inputdict['points_possible'] = points
-                    inputdict['description'] = description + " (" + makelink(addslash(homepage), stripnobool(dlink)) + ")"
-                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, "%Y%m%dT%H%M%SZ")) 
+                    inputdict['description'] = description + " (<a href=\"" + makelink(addslash(homepage), stripnobool(dlink)) + "\">" + makelink(addslash(homepage), stripnobool(dlink)) + "</a>)"
+                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
+                    inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                     inputdict['position'] = asmtidx
                     
+                    # https://canvas.instructure.com/doc/api/rubrics.html
+                    # 
+                    if "rubricpath" in deliverable:
+                        rubricpath = deliverable['rubricpath']
+                        rubricf = open(rubricpath, 'r')
+                        rubricmdcontents = rubricf.read()
+                        rubricpost = frontmatter.loads(rubricmdcontents)
+                        rubricpostdict = rubricpost.to_dict()  
+                        if "info" in rubricpostdict and "rubric" in rubricpostdict['info']:
+                            rubric = rubricpostdict['info']['rubric']                        
+                            
+                            inputdict['rubric'] = {}
+                            inputdict['rubric']['title'] = "Rubric"
+                            inputdict['rubric']['points_possible'] = points
+                            inputdict['rubric']['free_form_criterion_comments'] = True
+                            inputdict['rubric']['use_for_grading'] = True
+                            inputdict['rubric']['purpose'] = "Grading"
+                            inputdict['rubric']['criteria'] = {}
+                            
+                            criteriaidx = 0
+                            for criteria in rubric:
+                                inputdict['rubric']['criteria'][criteriaidx] = {}
+                                inputdict['rubric']['criteria'][criteriaidx]['description'] = criteria['description']
+                                inputdict['rubric']['criteria'][criteriaidx]['long_description'] = criteria['description']
+                                inputdict['rubric']['criteria'][criteriaidx]['criterion_use_range'] = True
+                                criteriapoints = points * float(rubric['weight'])
+                                inputdict['rubric']['criteria'][criteriaidx]['points'] = criteriapoints
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'] = {}
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['description'] = "Pre-Emerging"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['long_description'] = rubric['preemerging']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['points'] = criteriapoints * 0.25
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['description'] = "Beginning"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['long_description'] = rubric['beginning']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['points'] = criteriapoints * 0.50
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['description'] = "Progressing"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['long_description'] = rubric['progressing']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['points'] = criteriapoints * 0.85
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['description'] = "Proficient"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['long_description'] = rubric['proficient']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['points'] = criteriapoints * 1.00                                 
+                                criteriaidx = criteriaidx + 1
+                            
                     assignment = create_assignment(course, inputdict)
                     asmtidx = asmtidx + 1
                     
@@ -660,45 +730,57 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 inputdict['published'] = True
                 add_module_item(module, inputdict)                  
     
-    printlog("Writing Office Hours...")
+    # https://canvas.instructure.com/doc/api/late_policy.html
+    printlog("Writing Late Policy...")
+    inputdict = {}
+    inputdict['late_policy'] = {}
+    inputdict['late_policy']['late_submission_deduction_enabled'] = True
+    inputdict['late_policy']['missing_submission_deduction_enabled'] = True
+    inputdict['late_policy']['missing_submission_deduction'] = 100
+    inputdict['late_policy']['late_submission_deduction'] = late_penalty_per_period
+    inputdict['late_policy']['late_submission_interval'] = late_penalty_period
+    create_late_policy(course, inputdict)
     
-    # Write Office Hours as a Recurring Event
-    for instructor in postdict['instructors']:
-        instructorname = instructor['name']
+    if skipofficehours == False:
+        printlog("Writing Office Hours...")
         
-        for officehour in instructor['officehours']:     
-            day = officehour['day']
-            daynum = getDayCodeNum(officehour['day'])
+        # Write Office Hours as a Recurring Event
+        for instructor in postdict['instructors']:
+            instructorname = instructor['name']
             
-            dt = parseDate(startdate)
-            dt = adddays(dt, daynum)
-            
-            dtstart = getDateString(dt)
-            dtstart = dtstart + "T"
-            dtstart = dtstart + getTimeString(parseTime(officehour['starttime'])) 
+            for officehour in instructor['officehours']:     
+                day = officehour['day']
+                daynum = getDayCodeNum(officehour['day'])
+                
+                dt = parseDate(startdate)
+                dt = adddays(dt, daynum)
+                
+                dtstart = getDateString(dt)
+                dtstart = dtstart + "T"
+                dtstart = dtstart + getTimeString(parseTime(officehour['starttime'])) 
 
-            dtend = getDateString(dt) # assume no event overlaps a day boundary, ends on start date
-            dtend = dtend + "T"
-            dtend = dtend + getTimeString(parseTime(officehour['endtime'])) # leave in local time
+                dtend = getDateString(dt) # assume no event overlaps a day boundary, ends on start date
+                dtend = dtend + "T"
+                dtend = dtend + getTimeString(parseTime(officehour['endtime'])) # leave in local time
 
-            location = officehour['location']
-            
-            summary = coursenum + " " + coursename + " Drop-In / Office Hours with " + instructorname
-            
-            inputdict = {}
-            inputdict['context_code'] = coursecontext
-            inputdict['title'] = summary.strip()
-            inputdict['description'] = summary.strip()
-            inputdict['location_name'] = location.strip()
-            inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend
-            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
-            inputdict['all_day'] = False
-            inputdict['duplicate'] = {}
-            inputdict['duplicate']['frequency'] = "weekly"
-            inputdict['duplicate']['count'] = countWeeks(parseDate(startdate), parseDate(enddate))
-            
-            create_calendar_event(canvas, inputdict)  
+                location = officehour['location']
+                
+                summary = coursenum + " " + coursename + " Drop-In / Office Hours with " + instructorname
+                
+                inputdict = {}
+                inputdict['context_code'] = coursecontext
+                inputdict['title'] = summary.strip()
+                inputdict['description'] = summary.strip()
+                inputdict['location_name'] = location.strip()
+                inputdict['start_at'] = dtstart
+                inputdict['end_at'] = dtend
+                inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
+                inputdict['all_day'] = False
+                inputdict['duplicate'] = {}
+                inputdict['duplicate']['frequency'] = "weekly"
+                inputdict['duplicate']['count'] = countWeeks(parseDate(startdate), parseDate(enddate))
+                
+                create_calendar_event(canvas, inputdict)  
 
     printlog("Writing Exams...")
     
@@ -796,12 +878,13 @@ def usage():
     print("\t[-e | --duetime]\t Latest Due Time in UTC for Your Time Zone (i.e., T045959Z for Eastern Time)")
     print("\t[-d | --discussions]\tDo not delete or re-create discussion topics and entries")
     print("\t[-s | --assignments]\tDo not delete or re-create assignments (but still re-arrange existing ones in modules view)")
+    print("\t[-o | --noofficehours]\tDo not delete or re-create office hours")
     print("\nDo not create an assignment group called Assignments, and do prefix assignment names with the desired Assignment Group Name: Deliverable")
     
 # Parse user options
 # https://docs.python.org/3/library/getopt.html
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:e:ds", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone=", "duetime=", "discussions", "assignments"])
+    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:e:dso", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone=", "duetime=", "discussions", "assignments", "noofficehours"])
 except getopt.GetoptError as err:
     # print help information and exit:
     print(err)  # will print something like "option -z not recognized"
@@ -836,6 +919,8 @@ for o, a in opts:
         skipdiscussions = True
     elif o in ("-s", "--assignments"):
         skipassignments = True
+    elif o in ("-o", "--noofficehours"):
+        skipofficehours = True        
 
 if USER_ID is None:
     USER_ID = input("Enter User ID (get from API_URL + /api/v1/users/self): ")

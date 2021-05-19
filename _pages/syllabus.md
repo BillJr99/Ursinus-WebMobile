@@ -200,6 +200,7 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Handed Out"
     dlink: "Assignments/Warmup"
     points: 15  
+    submission_types: "noupload"
 - week: "0"
   date: "1"
   title: "Anatomy of an HTTP Request with Wireshark"
@@ -211,6 +212,7 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"
     dlink: "Assignments/Warmup"
     points: 15  
+    submission_types: "noupload"
 - week: "1"
   date: "0"
   title: "TCP Socket Programming in Python"  
@@ -221,6 +223,7 @@ schedule:
     - dtitle: "Programming Assignment: HTTP Client and Server Handed Out"
       dlink: "./Assignments/ClientServer"
       points: 100  
+      rubricpath: "_pages/Assignments/asmt-clientserver.md"
 - week: "1"
   date: "1"
   title: "Anatomy of a RESTful Call: JSON and CRUD"  
@@ -233,6 +236,7 @@ schedule:
     - dtitle: "Lab: WeatherUSA Service Client Handed Out"
       dlink: "./Labs/WeatherUSA"
       points: 100  
+      rubricpath: "_pages/Labs/lab-weatherusa.md"
   readings:
     - rtitle: "RESTful Web Services Chapter 1"
     - rtitle: "Setting up MongoDB"
@@ -263,7 +267,8 @@ schedule:
   deliverables:
     - dtitle: "Lab: WeatherUSA Service Client Due"
       dlink: "./Labs/WeatherUSA"
-      points: 100        
+      points: 100 
+      rubricpath: "_pages/Labs/lab-weatherusa.md"      
   readings:
     - rtitle: "node.js Reference Guide"
       rlink: "https://books.goalkicker.com/NodeJSBook/NodeJSNotesForProfessionals.pdf"
@@ -278,12 +283,15 @@ schedule:
     - dtitle: "Lab: COVID plot.ly Generator Handed Out"
       dlink: "./Labs/COVIDPlotlyBrowser"
       points: 100    
+      rubricpath: "_pages/Labs/lab-covidplotlybrowser.md"
     - dtitle: "Programming Assignment: HTTP Client and Server Due"
       dlink: "./Assignments/ClientServer"
       points: 100  
+      rubricpath: "_pages/Assignments/asmt-clientserver.md"
     - dtitle: "Programming Assignment: Service Clients Handed Out"
       dlink: "./Assignments/ServiceClient"
       points: 100
+      rubricpath: "_pages/Assignments/asmt-serviceclient.md"
   readings:
     - rtitle: "Building a RESTful API Using node.js YouTube Video"
       rlink: "https://www.youtube.com/watch?v=vjf774RKrLc"
@@ -321,16 +329,19 @@ schedule:
     - dtitle: "Lab: OAuth Handed Out"
       dlink: "./Labs/OAuth"  
       points: 100   
+      rubricpath: "_pages/Labs/lab-oauth.md"
 - week: "5"
   date: "2"
   title: "Web Service Client and Frontend Workshop"    
   deliverables:
     - dtitle: "Programming Assignment: Service Clients Due"
       dlink: "./Assignments/ServiceClient"
-      points: 100    
+      points: 100
+      rubricpath: "_pages/Assignments/asmt-serviceclient.md"      
     - dtitle: "Lab: COVID plot.ly Generator Due"
       dlink: "./Labs/COVIDPlotlyBrowser"
-      points: 100       
+      points: 100 
+      rubricpath: "_pages/Labs/lab-covidplotlybrowser.md"      
 - week: "6"
   date: "0"
   title: "Creating Your Own Web Services with node.js"
@@ -339,7 +350,8 @@ schedule:
   deliverables:
     - dtitle: "Programming Assignment: RESTful Services Handed Out"
       dlink: "./Assignments/Service"
-      points: 100      
+      points: 100   
+      rubricpath: "_pages/Assignments/asmt-service.md"
 - week: "6"
   date: "1"
   title: "Creating Your Own Web Services with node.js"   
@@ -347,9 +359,11 @@ schedule:
     - dtitle: "Lab: OAuth Due"
       dlink: "./Labs/OAuth"  
       points: 100  
+      rubricpath: "_pages/Labs/lab-oauth.md"
     - dtitle: "Lab: Food Bank Map Handed Out"
       dlink: "./Labs/FoodBankMap"
       points: 100    
+      rubricpath: "_pages/Labs/lab-foodbankmap.md"
 - week: "6"
   date: "2"
   title: "CORS"  
@@ -374,9 +388,11 @@ schedule:
     - dtitle: "Lab: Food Bank Map Due"
       dlink: "./Labs/FoodBankMap"
       points: 100  
+      rubricpath: "_pages/Labs/lab-foodbankmap.md"
     - dtitle: "Lab: GraphQL Handed Out"
       dlink: "./Labs/GraphQL"
       points: 100         
+      rubricpath: "_pages/Labs/lab-graphql.md"
 - week: "8"
   date: "0"
   title: "NoSQL"  
@@ -393,15 +409,19 @@ schedule:
     - dtitle: "Programming Assignment: RESTful Services Due"
       dlink: "./Assignments/Service"
       points: 100    
+      rubricpath: "_pages/Assignments/asmt-service.md"
     - dtitle: "Lab: GraphQL Due"
       dlink: "./Labs/GraphQL"
-      points: 100   
+      points: 100 
+      rubricpath: "_pages/Labs/lab-foodbankmap.md"
     - dtitle: "Lab: Swagger Handed Out"
       dlink: "./Labs/Swagger"
       points: 100  
+      rubricpath: "_pages/Labs/lab-swagger.md"
     - dtitle: "Programming Assignment: Databases Handed Out"
       dlink: "./Assignments/Databases"
       points: 100
+      rubricpath: "_pages/Assignments/asmt-database.md"
 - week: "9"
   date: "0"
   title: "Server-Side Authentication Models"  
@@ -416,6 +436,7 @@ schedule:
   deliverables:
     - dtitle: "Participation: First Notebook Check"
       points: 10    
+      submission_types: "written"
 - week: "9"
   date: "1"
   title: "Digital Certificates through Public Key Cryptosystems" 
@@ -436,15 +457,19 @@ schedule:
     - dtitle: "Lab: Swagger Due"
       dlink: "./Labs/Swagger"
       points: 100    
+      rubricpath: "_pages/Labs/lab-swagger.md"
     - dtitle: "Programming Assignment: Databases Due"
       dlink: "./Assignments/Databases"
-      points: 100  
+      points: 100 
+      rubricpath: "_pages/Assignments/asmt-database.md"
     - dtitle: "Programming Assignment: NoSQL Handed Out"
       dlink: "./Assignments/NoSQL"
       points: 100     
+      rubricpath: "_pages/Assignments/asmt-nosql.md"
     - dtitle: "Final Project: Interface Design Handed Out"
       dlink: "./Projects/Final"
-      points: 25       
+      points: 25    
+      rubricpath: "_pages/Projects/proj-final.md"
 - week: "10"
   date: "1"
   title: "CSS"  
@@ -467,6 +492,7 @@ schedule:
     - dtitle: "Lab: Accessibility Handed Out"
       dlink: "./Labs/Accessibility"
       points: 100
+      rubricpath: "_pages/Labs/lab-accessibility.md"
 - week: "11"
   date: "0"
   title: "Final Project Brainstorm"
@@ -478,9 +504,11 @@ schedule:
     - dtitle: "Programming Assignment: NoSQL Due"
       dlink: "./Assignments/NoSQL"
       points: 100   
+      rubricpath: "_pages/Assignments/asmt-nosql.md"
     - dtitle: "Programming Assignment: PWA Handed Out"
       dlink: "./Assignments/PWA"
       points: 100
+      rubricpath: "_pages/Assignments/asmt-pwa.md"
 - week: "12"
   date: "1"
   title: "Progressive Web Apps (PWA) for Cross Platform Development"  
@@ -492,12 +520,15 @@ schedule:
     - dtitle: "Lab: Accessibility Due"
       dlink: "./Labs/Accessibility"
       points: 100  
+      rubricpath: "_pages/Labs/lab-accessibility.md"
     - dtitle: "Final Project: Interface Design Due"
       dlink: "./Projects/Final"
       points: 25     
+      rubricpath: "_pages/Projects/proj-final.md"
     - dtitle: "Final Project: Project and Presentation Handed Out"
       dlink: "./Projects/Final"
       points: 75    
+      rubricpath: "_pages/Projects/proj-final.md"
 - week: "13"
   date: "0"
   title: "Data Services at Scale"  
@@ -511,14 +542,16 @@ schedule:
       rlink: "http://www.hfoss.org/"
   deliverables:
     - dtitle: "Participation: Second Notebook Check"
-      points: 10  
+      points: 10 
+      submission_types: "written"
 - week: "13"
   date: "2"
   title: "Final Project Workshopping"
   deliverables:
     - dtitle: "Programming Assignment: PWA Due"
       dlink: "./Assignments/PWA"
-      points: 100        
+      points: 100 
+      rubricpath: "_pages/Assignments/asmt-pwa.md"
 - week: "14"
   date: "0"
   title: "Final Project Presentations (Tuesday 12/15)"
@@ -526,6 +559,7 @@ schedule:
   - dtitle: "Final Project: Project and Presentation Due"
     dlink: "./Projects/Final"
     points: 75    
+    rubricpath: "_pages/Projects/proj-final.md"
 
 university:
   semester: "Fall"
