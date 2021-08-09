@@ -36,9 +36,11 @@ info:
     </div>
   
   zoom:
-  - section:
-      zoomlink: "https://ursinus-edu.zoom.us/j/98838443831"
-      phonenumberlink: "https://ursinus-edu.zoom.us/u/azWoc71sG"  
+    zoomrecordings: "Panopto on Canvas"
+    links:
+    - section:
+        zoomlink: "https://ursinus-edu.zoom.us/j/98838443831"
+        phonenumberlink: "https://ursinus-edu.zoom.us/u/azWoc71sG"  
   class_meets_days:
     isM: true
     isT: false
