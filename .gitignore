@@ -4,3 +4,5 @@ updatecalendar.sh
 geckodriver.log
 do-jekyll.sh
 Gemfile
+*.sh
+_pages/Quizzes/qti*
