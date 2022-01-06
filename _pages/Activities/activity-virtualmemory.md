@@ -56,7 +56,7 @@ info:
         <img src="../images/activity-virtualmemory/sum.png" alt="A MIPS program running with its memory laied out across its various segments.">
       title: "Mapping the MIPS Address Space"
       questions:
-        - "What address contains the 7?"
+        - "What address contains the value 7 from the program above?"
         - "In what region of memory is this value 7 located?"
         - "What address contains the string &quot;Five plus two is&quot;, and in what region is this located?"
         - "What addresses contain code, and in what region are these lines of code stored?"
