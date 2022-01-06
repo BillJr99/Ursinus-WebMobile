@@ -53,7 +53,9 @@ info:
             syscall        
         ]]></script>
         <br>
-        <img src="../images/activity-virtualmemory/sum.png" alt="A MIPS program running with its memory laied out across its various segments." width="800">
+        <img src="../images/activity-virtualmemory/sum-mem.png" alt="A MIPS program running with its memory laid out across its various segments.">
+        <br>
+        <img src="../images/activity-virtualmemory/sum-prog.png" alt="A snippet of MIPS code for the program that generated this memory layout.">
       title: "Mapping the MIPS Address Space"
       questions:
         - "What address contains the value 7 from the program above?"
