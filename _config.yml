@@ -12,7 +12,7 @@ title: "CS471"
 description: "Special Topics: Web and Mobile Development"
 
 url                      : https://BillJr99.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/Ursinus-WebMobile-Fall2020" # the subpath of your site, e.g. "/blog"
+baseurl                  : "/Ursinus-WebMobile" # the subpath of your site, e.g. "/blog"
 
 # Analytics  
 google_analytics         : "UA-24052857-1"
