@@ -21,7 +21,7 @@ info:
         - "Uninitialized global variables get linked together at a common memory address across all the code modules in your program.  So, if you have two globals with the same name, they end up pointing to the same memory address.  Why can't we immediately place an uninitialized global variable on the stack or data section of a module as soon as we see it, and where might we place it instead?"
         - "To what sections does each highlighted portion of code compile in a C program?"
         - "How much memory should we allocate to the stack and how much to the heap?  In other words, how should we divide up our available memory among these regions?"
-        - "What is the address of the two malloc'ed values?  How about the integer variables <code>a</code> and <code>b</code>?"
+        - "What is the address of the two <code>malloc</code>'ed values?  How about the integer variables <code>a</code> and <code>b</code>?"
         - "When you access a and b, what accesses take place to get to the heap?"
     
 tags:
