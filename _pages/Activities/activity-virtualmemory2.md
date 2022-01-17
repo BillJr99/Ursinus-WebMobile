@@ -15,6 +15,15 @@ info:
     - To design a logical address space that facilitates cooperative multitasking
   models:
     - model: |
+        <script type="syntaxhighlighter" class="brush: c"><![CDATA[
+        #include <stdio.h>
+        
+        void main() {
+            int sum = 5 + 2;
+            printf("Five plus two is: %d", sum);
+        }
+        ]]></script>
+        <br>        
         <script type="syntaxhighlighter" class="brush: mips"><![CDATA[
         .data 
         str1: .asciiz "Five plus two is: "
