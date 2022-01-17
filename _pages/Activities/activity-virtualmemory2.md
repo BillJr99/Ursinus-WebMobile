@@ -66,7 +66,7 @@ info:
       questions:
         - "What address contains the value 7 from the program above?"
         - "In what region of memory is this value 7 located?"
-        - "What address contains the string &quot;Five plus two is&quot;, and in what region is this located?"
+        - "What address contains the string &quot;Five plus two is&quot; and in what region is this located?"
         - "What addresses contain code, and in what region are these lines of code stored?"
         - "What would happen to our memory layout if you wanted to load and run another program?"
         - "Why is it important to have a consistent memory layout for each program we compile?  In other words, why not just randomize where things go in our program so that it is less likely that programs interfere with one another?"        
