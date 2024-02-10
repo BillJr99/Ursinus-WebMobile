@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Accessibility
 title: "Web and Mobile Development - Accessibility"
-excerpt: "Web and Mobile Development - Accessibility"
+
 
 info:
   goals: 

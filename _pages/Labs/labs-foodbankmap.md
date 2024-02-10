@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/FoodBankMap
 title: "CS471: Web and Mobile Development - Food Bank Map RESTful Service"
-excerpt: "CS471: Web and Mobile Development - Food Bank Map RESTful Service"
+
 
 info:
   coursenum: CS471

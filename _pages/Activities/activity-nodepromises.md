@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/NodePromises
 title: "Web and Mobile Development - node.js and Promises"
-excerpt: "Web and Mobile Development - node.js and Promises"
+
 
 info:
   goals: 

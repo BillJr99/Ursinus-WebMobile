@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/Swagger
 title: "Web and Mobile Development: Swagger"
-excerpt: "Web and Mobile Development: Swagger"
+
 
 info:
   coursenum: CS471

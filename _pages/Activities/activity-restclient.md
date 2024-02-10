@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/ServiceClient
 title: "Web and Mobile Development - RESTful Service Client"
-excerpt: "Web and Mobile Development - RESTful Service Client"
+
 
 info:
   additional_reading:

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/CoinFlip
 title: "Web and Mobile Development - Peruvian Coin Flip"
-excerpt: "Web and Mobile Development - Peruvian Coin Flip"
+
 
 info:
   goals: 

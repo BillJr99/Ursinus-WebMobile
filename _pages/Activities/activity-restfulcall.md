@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/RESTfulCalls
 title: "Web and Mobile Development - RESTful Calls"
-excerpt: "Web and Mobile Development - RESTful Calls"
+
 
 info:
   goals: 

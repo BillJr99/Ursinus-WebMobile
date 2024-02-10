@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/NoSQL
 title: "CS471: Web and Mobile Development - NoSQL"
-excerpt: "CS471: Web and Mobile Development - NoSQL"
+
 
 info:
   coursenum: CS471

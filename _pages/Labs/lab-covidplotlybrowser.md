@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/COVIDPlotlyBrowser
 title: "Web and Mobile Development: COVID Plot.ly Browser Client"
-excerpt: "Web and Mobile Development: COVID Plot.ly Browser Client"
+
 
 info:
   coursenum: CS471

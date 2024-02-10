@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/OAuth
 title: "Web and Mobile Development: OAuth Receiver"
-excerpt: "Web and Mobile Development: OAuth Receiver"
+
 
 info:
   coursenum: CS471

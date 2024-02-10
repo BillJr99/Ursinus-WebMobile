@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Cache
 title: "Web and Mobile Development - Cache"
-excerpt: "Web and Mobile Development - Cache"
+
 
 info:
   goals: 

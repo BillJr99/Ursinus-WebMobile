@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/PullRequests
 title: "Web and Mobile Development: Pull Requests"
-excerpt: "Web and Mobile Development: Pull Requests"
+
 
 info:
   coursenum: CS471

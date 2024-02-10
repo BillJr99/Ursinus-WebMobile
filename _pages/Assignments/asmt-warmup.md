@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Warmup
 title: "CS471: Web and Mobile Development - Warmup"
-excerpt: "CS471: Web and Mobile Development - Warmup"
+
 
 info:
   coursenum: CS471

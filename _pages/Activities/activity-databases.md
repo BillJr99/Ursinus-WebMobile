@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Databases
 title: "Web and Mobile Development - Databases"
-excerpt: "Web and Mobile Development - Databases"
+
 
 info:
   goals: 

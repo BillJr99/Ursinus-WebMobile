@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/PWA
 title: "Web and Mobile Development - Progressive Web Apps"
-excerpt: "Web and Mobile Development - Progressive Web Apps"
+
 
 info:
   goals: 

@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Databases
 title: "CS471: Web and Mobile Development - Databases"
-excerpt: "CS471: Web and Mobile Development - Databases"
+
 
 info:
   coursenum: CS471

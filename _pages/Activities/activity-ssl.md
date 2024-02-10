@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/SSL
 title: "Web and Mobile Development - Secure Sockets Layer"
-excerpt: "Web and Mobile Development - Secure Sockets Layer"
+
 
 info:
   goals: 

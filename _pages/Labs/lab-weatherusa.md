@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/WeatherUSA
 title: "Web and Mobile Development: WeatherUSA Client"
-excerpt: "Web and Mobile Development: WeatherUSA Client"
+
 
 info:
   coursenum: CS471

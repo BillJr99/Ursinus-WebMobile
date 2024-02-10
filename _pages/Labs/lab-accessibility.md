@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/Accessibility
 title: "Web and Mobile Development: Web Accessibility"
-excerpt: "Web and Mobile Development: Web Accessibility"
+
 
 info:
   coursenum: CS471

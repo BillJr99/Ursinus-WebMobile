@@ -2,7 +2,7 @@
 layout: syllabus
 permalink: /
 title: "CS471: Special Topics: Web and Mobile Development"
-excerpt: "CS471: Special Topics: Web and Mobile Development"
+
 
 info:
   course_number: CS471

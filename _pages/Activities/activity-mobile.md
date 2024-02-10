@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MobileDev
 title: "Web and Mobile Development - Mobile Development Client with node.js"
-excerpt: "Web and Mobile Development - Mobile Development Client with node.js"
+
 
 info:
   goals: 

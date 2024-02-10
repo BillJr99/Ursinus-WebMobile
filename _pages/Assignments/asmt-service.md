@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Service
 title: "CS471: Web and Mobile Development - RESTful Services"
-excerpt: "CS471: Web and Mobile Development - RESTful Services"
+
 
 info:
   coursenum: CS471

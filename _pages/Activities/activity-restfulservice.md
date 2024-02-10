@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/RESTfulService
 title: "Web and Mobile Development - RESTful Services"
-excerpt: "Web and Mobile Development - RESTful Services"
+
 
 info:
   goals: 

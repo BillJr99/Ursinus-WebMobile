@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/DigitalSignatures
 title: "Web and Mobile Development - Digital Signatures"
-excerpt: "Web and Mobile Development - Digital Signatures"
+
 
 info:
   goals: 

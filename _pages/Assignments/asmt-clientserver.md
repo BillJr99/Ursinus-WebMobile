@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/ClientServer
 title: "CS471: Web and Mobile Development - Clients and Servers"
-excerpt: "CS471: Web and Mobile Development - Clients and Servers"
+
 
 info:
   coursenum: CS471

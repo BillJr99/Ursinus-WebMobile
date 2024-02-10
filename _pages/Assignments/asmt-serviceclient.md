@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/ServiceClient
 title: "CS471: Web and Mobile Development - Service Clients"
-excerpt: "CS471: Web and Mobile Development - Service Clients"
+
 
 info:
   coursenum: CS471

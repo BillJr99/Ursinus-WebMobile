@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/PWA
 title: "CS471: Web and Mobile Development - PWA"
-excerpt: "CS471: Web and Mobile Development - PWA"
+
 
 info:
   coursenum: CS471

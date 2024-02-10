@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/CORS
 title: "Web and Mobile Development - Cross-Origin Resource Sharing"
-excerpt: "Web and Mobile Development - Cross-Origin Resource Sharing"
+
 
 info:
   additional_reading:

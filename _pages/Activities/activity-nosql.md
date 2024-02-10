@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/NoSQL
 title: "Web and Mobile Development - NoSQL"
-excerpt: "Web and Mobile Development - NoSQL"
+
 
 info:
   goals: 

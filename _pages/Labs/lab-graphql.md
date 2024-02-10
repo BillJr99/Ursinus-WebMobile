@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/GraphQL
 title: "Web and Mobile Development: GraphQL"
-excerpt: "Web and Mobile Development: GraphQL"
+
 
 info:
   coursenum: CS471

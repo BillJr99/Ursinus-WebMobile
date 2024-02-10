@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Projects/Final
 title: "Web and Mobile Development - Final Project"
-excerpt: "Web and Mobile Development - Final Project"
+
 
 info:
   coursenum: CS471
