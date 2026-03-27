@@ -58,8 +58,9 @@ Note that you will need to enable CORS to try out the endpoints!
 
 Here is a minimal working example:
 
-<iframe
-  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FSwaggerExample.zip&title=SwaggerExample"
+<iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FSwaggerExample.zip&title=SwaggerExample"
+  height="600px"
+  width="100%"
   scrolling="yes"
   frameborder="no"
   allowfullscreen="true"

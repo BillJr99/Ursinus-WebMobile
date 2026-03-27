@@ -27,19 +27,24 @@ info:
 </iframe>  
     - model: |
       title: A Dynamic PWA Using a Backend Web Service
-      embed: <iframe
-  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2Fpwa-example-dynamic.zip&title=pwa+example+dynamic"
-  scrolling="yes"
-  frameborder="no"
-  allowfullscreen="true"
-  sandbox="allow-scripts allow-same-origin">
-</iframe><br /><br /><iframe
-  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2Fpwa-example-server.zip&title=pwa+example+server"
-  scrolling="yes"
-  frameborder="no"
-  allowfullscreen="true"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>          
+      embed: |
+        <iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2Fpwa-example-dynamic.zip&title=pwa+example+dynamic"
+          height="600px"
+          width="100%"        
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+        <br />
+        <iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2Fpwa-example-server.zip&title=pwa+example+server"
+          height="600px"
+          width="100%"        
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>          
       questions:
         - "In <code>script.js</code>, where has the <code>courses</code> array gone?"
         - How has the service worker changed to intercept fetches and forward them to the web server if they are remote data calls?

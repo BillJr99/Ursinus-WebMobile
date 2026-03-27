@@ -55,13 +55,15 @@ info:
         </pre>
         </div>
       title: SSL Certificates
-      embed: <iframe
-  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FRESTfulServiceExample.zip&title=RESTfulServiceExample"
-  scrolling="yes"
-  frameborder="no"
-  allowfullscreen="true"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>       
+      embed: |
+        <iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FRESTfulServiceExample.zip&title=RESTfulServiceExample"
+          height="600px"
+          width="100%"        
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>       
       questions:
         - What is an SSL Certificate Chain?
         - What is a Certificate Authority?

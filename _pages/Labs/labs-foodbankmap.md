@@ -64,8 +64,9 @@ To support a web-based frontend, we will need to enable [CORS](../Activities/COR
 ## Part 2: Google Map Frontend Configuration and Tutorial
 The example below shows a minimal working example of a Google Map that plots the location of Ursinus College, and plots a custom marker with a location given by the current location as obtained through the browser client.  You can change this marker icon later by calling the `Marker.setIcon(image);` function.
 
-<iframe
-  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FGoogleMapExample.zip&title=GoogleMapExample"
+<iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FGoogleMapExample.zip&title=GoogleMapExample"
+  height="600px"
+  width="100%"
   scrolling="yes"
   frameborder="no"
   allowfullscreen="true"
