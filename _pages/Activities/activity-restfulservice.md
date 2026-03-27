@@ -29,7 +29,13 @@ info:
         - What does the square bracket represent?
         - Modify the program to access this RESTful endpoint and, in a loop, print out each day's date (using <code>validt</code>) and temperature. An example <code>for</code> loop in <a href=\"https://www.w3schools.com/js/js_json_arrays.asp\">JavaScript</a> is given above.
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/WeatherClientExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+        <iframe
+  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FWeatherClientExample.zip&title=WeatherClientExample"
+  scrolling="yes"
+  frameborder="no"
+  allowfullscreen="true"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>  
     - model: |
         <div align="left">
         <pre>
@@ -113,7 +119,13 @@ info:
         <img src="../images/examples/restfulserviceexample/curl-restserviceexample-postputget.png" alt="Performing an update with cURL">
         <br>
       title: RESTful Service
-      embed: <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/RESTfulServiceExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+      embed: <iframe
+  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FRESTfulServiceExample.zip&title=RESTfulServiceExample"
+  scrolling="yes"
+  frameborder="no"
+  allowfullscreen="true"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>  
       questions:
         - "Launch the given web service and invoke it using your choice of web client.  To do this, you will want to set up a <a href=\"http://mongodb.com\">mongodb</a> database, add a test user with a password, and allow access from any IP address.  MongoDB will give you a connection string that you can paste into <code>index.js</code> over my default <code>test_user</code> connection string.  <a href=\"https://dev.to/lennythedev/rest-api-with-mongodb-atlas-cloud-node-and-express-in-10-minutes-2ii1\">This article</a> details setting up a MongoDB account and data store.  In the code example, you can update your mongodb link, including your username and password, in the mongoose.connect line.  Be sure to remove these from your code when you're done, or better yet, de-activate that user account on mongodb (you can schedule this to expire when you create it)!"
         - "Invoke the service using a node.js application or a JavaScript browser client.  You can use the Advanced REST Client plugin for Chrome (or Postman, or a similar REST client plugin, on other browsers) or the <code>curl</code> command to execute your web service, in addition to the client code examples we saw previously.  Just update the link to your repl.it server project link in the commands or URL's shown here."

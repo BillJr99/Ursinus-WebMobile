@@ -58,7 +58,13 @@ Note that you will need to enable CORS to try out the endpoints!
 
 Here is a minimal working example:
 
-<iframe height="800px" width="100%" src="https://repl.it/@BillJr99/SwaggerExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+<iframe
+  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FSwaggerExample.zip&title=SwaggerExample"
+  scrolling="yes"
+  frameborder="no"
+  allowfullscreen="true"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>  
 
 ## Part 1: Adding Swagger Documentation
 

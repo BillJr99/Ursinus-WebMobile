@@ -27,7 +27,14 @@ info:
       questions:
         - Run the repl.it and navigate to the page given, entering the query shown in the figure
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/GraphQLExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+        <iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FGraphQLExample.zip&title=GraphQLExample"
+          height="600px"
+          width="100%"        
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>  
         
 tags:
   - graphql

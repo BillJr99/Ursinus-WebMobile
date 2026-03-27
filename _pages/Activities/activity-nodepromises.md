@@ -10,9 +10,33 @@ info:
     - To use node.js in asynchronous environments
   models:
     - model: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/MySQLExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+        <iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FMySQLExample.zip&title=MySQLExample"
+          height="600px"
+          width="100%"        
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>  
       title: node.js Promises
-      embed: <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/MySQLPromiseExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe><br /><iframe height="400px" width="100%" src="https://repl.it/@BillJr99/MySQLAwaitExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+      embed: | 
+        <iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FMySQLPromiseExample.zip&title=MySQLPromiseExample"
+          height="600px"
+          width="100%"        
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+        <br />
+        <iframe src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2FMySQLAwaitExample.zip&title=MySQLAwaitExample"
+          height="600px"
+          width="100%"        
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
       questions:
         - In the first example, why is the code hard to follow?
         - "If you put a <code>process.exit()</code>statement at the bottom of the first example, what do you think would happen?"
