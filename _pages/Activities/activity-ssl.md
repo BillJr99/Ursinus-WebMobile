@@ -70,7 +70,7 @@ info:
         - "Using this command, generate and use your own SSL certificate: <code>openssl genrsa -out private_key.pem && openssl req -new -key private_key.pem -out csr.pem && openssl x509 -req -days 9999 -in csr.pem -signkey private_key.pem -out certificate_chain.pem</code>.  Add these to a node.js program and invoke an endpoint over https."
         - Did you get a warning from your browser and, if so, why?
     - model: |
-        <a title="I, Giaros / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:PublicKeyCertificateDiagram_It.svg"><img width="512" alt="PublicKeyCertificateDiagram It" src="https://upload.wikimedia.org/wikipedia/commons/6/65/PublicKeyCertificateDiagram_It.svg"></a>
+        <a title="I, Giaros / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:PublicKeyCertificateDiagram_It.svg"><img width="512" alt="PublicKeyCertificateDiagram It" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/PublicKeyCertificateDiagram_It.svg"></a>
       title: Signing of a Public Key by a Certificate Authority
       questions:
         - Although you can self-sign a certificate, why might it be more authoritative to have a trusted third party validate your identity and sign your key to form a certificate?

@@ -13,7 +13,7 @@ info:
     - To enable CORS on a per-domain basis
   models:
     - model: |
-        <a title="Bluesmoon / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Flowchart_showing_Simple_and_Preflight_XHR.svg"><img width="512" alt="Flowchart showing Simple and Preflight XHR" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flowchart_showing_Simple_and_Preflight_XHR.svg"></a>
+        <a title="Bluesmoon / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Flowchart_showing_Simple_and_Preflight_XHR.svg"><img width="512" alt="Flowchart showing Simple and Preflight XHR" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Flowchart_showing_Simple_and_Preflight_XHR.svg"></a>
         <br>
                 <div align="left">
         <pre>
