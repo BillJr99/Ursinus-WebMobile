@@ -199,7 +199,7 @@ schedule:
 - week: "0"
   date: "0"
   title: "Course Sneak Preview"
-  link: "/Ursinus-WebMobile-Overview"
+  link: "https://www.billmongan.com/Ursinus-WebMobile-Overview"
   deliverables:
   - dtitle: "Programming Assignment: Warmup Handed Out"
     dlink: "Assignments/Warmup"
@@ -208,7 +208,7 @@ schedule:
 - week: "0"
   date: "1"
   title: "Anatomy of an HTTP Request with Wireshark"
-  link: "/Ursinus-WebMobile-HTTP"
+  link: "https://www.billmongan.com/Ursinus-WebMobile-HTTP"
 - week: "0"
   date: "2"
   title: "Anatomy of an HTTP Request with Wireshark"
@@ -256,7 +256,7 @@ schedule:
 - week: "2"
   date: "2"
   title: "RESTful Web Services, Body Parameters, and Headers"
-  link: "../Ursinus-WebMobile-REST"  
+  link: "https://www.billmongan.com/Ursinus-WebMobile-REST"  
   readings:
     - rtitle: "A Service-Based Software Engineering Portal Website"
       rlink: "https://www.cs.drexel.edu/~spiros/papers/ICPC08.pdf"
@@ -309,7 +309,7 @@ schedule:
 - week: "4"
   date: "1"
   title: "SAML and OAuth"
-  link: "../Ursinus-WebMobile-OAuth"  
+  link: "https://www.billmongan.com/Ursinus-WebMobile-OAuth"  
   readings:
   - rtitle: "OAuth 2.0 Simplified"
     rlink: "https://aaronparecki.com/oauth-2-simplified/#roles"         
@@ -429,7 +429,7 @@ schedule:
 - week: "9"
   date: "0"
   title: "Server-Side Authentication Models"  
-  link: "../Ursinus-WebMobile-ServerSideAuth"
+  link: "https://www.billmongan.com/Ursinus-WebMobile-ServerSideAuth"
   readings:
     - rtitle: "Generating JWT Using express Web Services"
       rlink: "https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs"
