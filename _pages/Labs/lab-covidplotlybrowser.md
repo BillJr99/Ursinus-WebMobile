@@ -143,6 +143,7 @@ Create a dictionary of `xarr` and `yarr` arrays, with the state as the key.  Not
 
 ![Example COVID Plot with plot.ly](../images/lab-covidplotlybrowser/covid-plotly.png)
 
+<!-- run: id=webmobile-lab-covidplotlybrowser-1 viz=plain -->
 ```javascript
 var dict = {};
 dict['key'] = 'value';
@@ -155,3 +156,4 @@ for(var key in dict) { // you can iterate the dict!
     console.log(key + ": " + dict[key]);
 }
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-WebMobile/viz/#webmobile-lab-covidplotlybrowser-1) <!-- code-viz link -->
