@@ -1,0 +1,22 @@
+{
+ "code": "var dict = {};\ndict['key'] = 'value';\ndict['arr'] = [];         // you can append to this\ndict['arr'].push(5);      // like any other array!\ndict['key']['arr1'] = []; // here is another one\ndict['key']['arr2'] = []; // and another one\n\nfor(var key in dict) { // you can iterate the dict!\n    console.log(key + \": \" + dict[key]);\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "webmobile-lab-covidplotlybrowser-1",
+ "lang": "js",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-10 set things up.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "description": "Line 8 starts a loop.",
+   "kind": "focus",
+   "lines": "8"
+  }
+ ],
+ "title": "Extra Credit 2 (10 Points): Modify Step 3 for All States",
+ "version": 1
+}

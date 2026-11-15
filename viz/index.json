@@ -1,7 +1,7 @@
 {
  "course": "webmobile",
  "site": "https://billjr99.github.io/Ursinus-WebMobile",
- "built": "2026-11-14 13:15",
+ "built": "2026-11-15 00:51",
  "examples": [
   {
    "id": "webmobile-lab-covidplotlybrowser-1",
@@ -11,7 +11,11 @@
    "line": 147,
    "page_url": "https://billjr99.github.io/Ursinus-WebMobile/Labs/lab-covidplotlybrowser",
    "error": null,
-   "steps": 0
+   "steps": 0,
+   "modes": [
+    "run",
+    "explain"
+   ]
   }
  ]
 }
