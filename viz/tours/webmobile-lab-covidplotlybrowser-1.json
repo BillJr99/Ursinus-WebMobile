@@ -1,0 +1,33 @@
+{
+ "code": "var dict = {};\ndict['key'] = 'value';\ndict['arr'] = [];         // you can append to this\ndict['arr'].push(5);      // like any other array!\ndict['key']['arr1'] = []; // here is another one\ndict['key']['arr2'] = []; // and another one\n\nfor(var key in dict) { // you can iterate the dict!\n    console.log(key + \": \" + dict[key]);\n}",
+ "description": "You inspect the supplied JavaScript property assignments and printed loop output.",
+ "example": "webmobile-lab-covidplotlybrowser-1",
+ "lang": "js",
+ "reviewed": false,
+ "source": "draft: codex free model",
+ "steps": [
+  {
+   "description": "You create an object with a key property holding the string value and an arr property holding an array. push(5) adds one element to that array.",
+   "kind": "reveal",
+   "lines": "1-4"
+  },
+  {
+   "answer": "The property named key holds a string. These assignments target that string value rather than a nested object; the supplied output shows no nested arrays.",
+   "kind": "predict",
+   "lines": "5-6",
+   "question": "Is dict[key] an object ready to hold arr1 and arr2 at these lines?"
+  },
+  {
+   "description": "You reach a for-in loop that visits the object's enumerable property names. Each log statement joins the property name and its value into text.",
+   "kind": "reveal",
+   "lines": "5-10"
+  },
+  {
+   "description": "You see key: value and arr: 5 in the recorded output. Concatenating the one-element array into the message displays its element as 5.",
+   "kind": "focus",
+   "lines": "8-10"
+  }
+ ],
+ "title": "Read object properties and an array value",
+ "version": 1
+}
