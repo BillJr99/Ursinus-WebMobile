@@ -18,13 +18,14 @@ info:
         - How do we ensure that each box appears in a dynamically-sized grid?
         - How do we intercept a fetch and serve the content locally, serving as a cache?
         - Load the web page in a Chrome browser on your mobile device, if you have one.  From the Chrome menu, you can add the app to your home screen.  Try changing the navigation color and the home screen icon.
-      embed: <iframe
-  src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2Fpwa-example-static.zip&title=pwa+example+static"
-  scrolling="yes"
-  frameborder="no"
-  allowfullscreen="true"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>  
+      embed: |
+        <iframe
+          src="https://www.billmongan.com/Ursinus-WebMobile/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-WebMobile%2Fgh-pages%2Ffiles%2Freplit%2Fpwa-example-static.zip&title=pwa+example+static"
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
     - model: |
       title: A Dynamic PWA Using a Backend Web Service
       embed: |
